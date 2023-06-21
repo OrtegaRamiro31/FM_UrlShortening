@@ -4,7 +4,20 @@ module.exports = {
     "./src/**/*.{html,ts}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primaryViolet: 'hsl(257, 27%, 26%)',
+        primaryCyan: 'hsl(257, 27%, 26%)',
+        secondaryRed: 'hsl(0, 87%, 67%)',
+        neutralGray: 'hsl(0, 87%, 67%)',
+        neutralGrayishViolet: 'hsl(257, 7%, 63%)',
+        neutralVeryDarkBlue: 'hsl(255, 11%, 22%)',
+        neutralVeryDarkViolet: 'hsl(260, 8%, 14%)',
+      },
+      fontSize: {
+        bodyCopy: ['18px', '1rem'],
+      }
+    },
   },
   plugins: [],
 }
