@@ -9,6 +9,7 @@ import {HttpClientModule} from "@angular/common/http";
 import { CardlinkComponent } from './components/cardlink/cardlink.component';
 import {ClipboardModule} from "ngx-clipboard";
 import { StatisticsComponent } from './components/statistics/statistics.component';
+import { StatisticComponent } from './components/statistic/statistic.component';
 
 
 
@@ -20,6 +21,7 @@ import { StatisticsComponent } from './components/statistics/statistics.componen
     ShortenComponent,
     CardlinkComponent,
     StatisticsComponent,
+    StatisticComponent,
   ],
   exports: [
     HomeComponent
