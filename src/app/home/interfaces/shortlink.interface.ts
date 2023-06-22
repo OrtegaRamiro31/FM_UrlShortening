@@ -1,4 +1,4 @@
-export interface ShortLink {
+export interface ShortlinkInterface {
   ok:     boolean;
   result: Result;
 }
