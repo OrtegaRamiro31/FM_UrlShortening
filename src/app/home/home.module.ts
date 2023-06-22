@@ -4,6 +4,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './pages/home/home.component';
 import { StartedComponent } from './components/started/started.component';
 import { ShortenComponent } from './components/shorten/shorten.component';
+import {ReactiveFormsModule} from "@angular/forms";
+import {HttpClientModule} from "@angular/common/http";
 
 
 
@@ -12,14 +14,16 @@ import { ShortenComponent } from './components/shorten/shorten.component';
     HeaderComponent,
     HomeComponent,
     StartedComponent,
-    ShortenComponent
+    ShortenComponent,
   ],
   exports: [
     HomeComponent
   ],
   imports: [
     CommonModule,
-    NgOptimizedImage
+    NgOptimizedImage,
+    ReactiveFormsModule,
+    HttpClientModule
   ]
 })
 export class HomeModule { }
