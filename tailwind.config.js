@@ -14,9 +14,12 @@ module.exports = {
         neutralVeryDarkBlue: 'hsl(255, 11%, 22%)',
         neutralVeryDarkViolet: 'hsl(260, 8%, 14%)',
       },
+      fontFamily: {
+        Poppins: ['Poppins', 'sans-serif']
+      },
       fontSize: {
         bodyCopy: ['18px', '1rem'],
-      }
+      },
     },
   },
   plugins: [],
