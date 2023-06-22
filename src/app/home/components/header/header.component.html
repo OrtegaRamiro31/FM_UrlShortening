@@ -22,24 +22,23 @@
         </svg>
       </button>
     </div>
-<!--    <nav class="flex gap-7">
+  </div>
+</div>
+
+<div
+  class="bg-primaryViolet text-white text-xl text-center py-8 mt-5 rounded-xl font-bold"
+  [ngClass]="{'hidden' : hideMenu}"
+>
+  <div class="divide-y divide-neutralGrayishViolet w-11/12 mx-auto">
+    <nav class="flex flex-col gap-6 pb-8">
       <a href="#">Features</a>
       <a href="#">Pricing</a>
       <a href="#">Resources</a>
-    </nav>-->
+    </nav>
+
+    <nav class="flex flex-col gap-6 pt-8">
+      <a href="#">Login</a>
+      <a href="#" class="bg-primaryCyan text-white rounded-2xl py-1.5 px-4">Sign Up</a>
+    </nav>
   </div>
-
-
-<!--  <div class="flex gap-7 items-center">
-    <a href="#">Login</a>
-    <a class="text-white bg-cyan-400 rounded-2xl py-1.5 px-4" href="#">Sign Up</a>
-  </div>-->
 </div>
-
-<nav class="gap-7"
-     [ngClass]="{'hidden' : hideMenu}"
->
-  <a href="#">Features</a>
-  <a href="#">Pricing</a>
-  <a href="#">Resources</a>
-</nav>
