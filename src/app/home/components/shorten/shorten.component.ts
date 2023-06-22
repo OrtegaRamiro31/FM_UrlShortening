@@ -29,6 +29,8 @@ export class ShortenComponent {
       original_link: ''
     }
   };
+  public shortLinksList: ShortlinkInterface[] = [];
+
   public linkValue: string = '';
 
   constructor(
@@ -40,7 +42,7 @@ export class ShortenComponent {
   generateShortLink(): void {
     this.linkValue = this.myForm.value.link;
     this.shorterLinksService.getShorterLink(this.linkValue).subscribe(
-      shortLink => {this.shortestLink = shortLink}
+      shortLink => {this.shortLinksList = [...this.shortLinksList, shortLink];}
     )
   }
 }
