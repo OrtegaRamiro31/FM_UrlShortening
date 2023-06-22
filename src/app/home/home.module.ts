@@ -8,6 +8,7 @@ import {ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import { CardlinkComponent } from './components/cardlink/cardlink.component';
 import {ClipboardModule} from "ngx-clipboard";
+import { StatisticsComponent } from './components/statistics/statistics.component';
 
 
 
@@ -18,6 +19,7 @@ import {ClipboardModule} from "ngx-clipboard";
     StartedComponent,
     ShortenComponent,
     CardlinkComponent,
+    StatisticsComponent,
   ],
   exports: [
     HomeComponent
