@@ -6,6 +6,7 @@ import { StartedComponent } from './components/started/started.component';
 import { ShortenComponent } from './components/shorten/shorten.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
+import { CardlinkComponent } from './components/cardlink/cardlink.component';
 
 
 
@@ -15,6 +16,7 @@ import {HttpClientModule} from "@angular/common/http";
     HomeComponent,
     StartedComponent,
     ShortenComponent,
+    CardlinkComponent,
   ],
   exports: [
     HomeComponent
