@@ -26,10 +26,11 @@
 </div>
 
 <div
-  class="bg-primaryViolet text-white text-xl text-center py-8 mt-5 rounded-xl font-bold"
-  [ngClass]="{'hidden' : hideMenu}"
+  class="bg-primaryViolet text-white text-xl text-center py-8 mt-5 rounded-xl font-bold transition-all ease-in-out duration-1500"
+  [ngClass]="{'h-0 opacity-0': hideMenu, 'py-8 mt-5' : !hideMenu}"
 >
-  <div class="divide-y divide-neutralGrayishViolet w-11/12 mx-auto">
+  <div class="divide-y divide-neutralGrayishViolet w-11/12 mx-auto"
+       [ngClass]="{'opacity-0': hideMenu}">
     <nav class="flex flex-col gap-6 pb-8">
       <a href="#">Features</a>
       <a href="#">Pricing</a>
@@ -42,3 +43,4 @@
     </nav>
   </div>
 </div>
+l
