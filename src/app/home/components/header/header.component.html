@@ -1,6 +1,12 @@
 <div class="flex justify-between items-center font-bold text-gray-400">
-  <div class="flex items-center gap-10 w-full justify-between">
+  <div class="flex items-center gap-10 w-full justify-between xl:justify-normal">
     <img ngSrc="assets/img/logo.svg" alt="Logo Shortly" height="33" width="121">
+
+    <nav class="hidden xl:flex gap-6">
+      <a href="#">Features</a>
+      <a href="#">Pricing</a>
+      <a href="#">Resources</a>
+    </nav>
 
     <div class="xl:hidden">
       <button
@@ -24,6 +30,10 @@
       </button>
     </div>
   </div>
+  <nav class="hidden xl:flex items-center gap-6 xl:w-56">
+    <a href="#">Login</a>
+    <a href="#" class="bg-primaryCyan text-white rounded-2xl py-1.5 px-4">Sign Up</a>
+  </nav>
 </div>
 
 <div
