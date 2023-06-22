@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {ShorterLinksService} from "../../services/shorter-links.service";
 import {ShortlinkInterface} from "../../interfaces/shortlink.interface";
@@ -14,7 +14,22 @@ export class ShortenComponent {
     link: ['', [Validators.required]],
   });
 
-  public shortestLink?: ShortlinkInterface;
+  public shortestLink: ShortlinkInterface = {
+    ok: false,
+    result: {
+      code: '',
+      short_link: '',
+      full_short_link: '',
+      short_link2: '',
+      full_short_link2: '',
+      short_link3: '',
+      full_short_link3: '',
+      share_link: '',
+      full_share_link: '',
+      original_link: ''
+    }
+  };
+  public linkValue: string = '';
 
   constructor(
     private formBuilder: FormBuilder,
@@ -23,8 +38,8 @@ export class ShortenComponent {
 
 
   generateShortLink(): void {
-    const link = this.myForm.value.link;
-    this.shorterLinksService.getShorterLink(link).subscribe(
+    this.linkValue = this.myForm.value.link;
+    this.shorterLinksService.getShorterLink(this.linkValue).subscribe(
       shortLink => {this.shortestLink = shortLink}
     )
   }

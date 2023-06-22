@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
+import {ShortlinkInterface} from "../../interfaces/shortlink.interface";
 
 @Component({
   selector: 'home-cardlink',
@@ -7,5 +8,8 @@ import { Component } from '@angular/core';
   ]
 })
 export class CardlinkComponent {
+
+  @Input()
+  shortestLink: ShortlinkInterface = {} as ShortlinkInterface;
 
 }

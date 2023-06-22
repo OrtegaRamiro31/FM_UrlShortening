@@ -17,5 +17,11 @@
 
   </form>
 
-<home-cardlink></home-cardlink>
+  <div
+    *ngIf="shortestLink"
+  >
+    <home-cardlink
+      [shortestLink]="shortestLink"
+    ></home-cardlink>
+  </div>
 
