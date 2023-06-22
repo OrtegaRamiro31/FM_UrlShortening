@@ -2,6 +2,12 @@
   <p class="truncate text-neutralVeryDarkBlue mb-3">{{shortestLink.result.original_link}}</p>
   <div class="pt-3">
     <a class="text-primaryCyan" href="{{shortestLink.result.full_short_link}}" target="_blank">{{shortestLink.result.full_short_link}}</a>
-    <button class="mt-3 block mx-auto bg-primaryCyan w-11/12 rounded-xl text-white text-lg font-bold py-2">Copy</button>
+    <button
+      (cbOnSuccess)="contentCopied($event)"
+      ngxClipboard
+      [cbContent]="shortestLink.result.full_short_link"
+      class="mt-3 block mx-auto bg-primaryCyan w-11/12 rounded-xl text-white text-lg font-bold py-2"
+      [ngClass]="isCopied ? 'bg-primaryViolet' : '' "
+    >{{isCopied ? 'Copied!' : 'Copy'}}</button>
   </div>
 </div>

@@ -7,6 +7,7 @@ import { ShortenComponent } from './components/shorten/shorten.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import { CardlinkComponent } from './components/cardlink/cardlink.component';
+import {ClipboardModule} from "ngx-clipboard";
 
 
 
@@ -25,7 +26,8 @@ import { CardlinkComponent } from './components/cardlink/cardlink.component';
     CommonModule,
     NgOptimizedImage,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ClipboardModule,
   ]
 })
 export class HomeModule { }
