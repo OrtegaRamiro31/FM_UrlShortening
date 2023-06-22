@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-started',
+  selector: 'home-started',
   templateUrl: './started.component.html',
   styles: [
   ]

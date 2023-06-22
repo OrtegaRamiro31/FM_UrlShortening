@@ -9,7 +9,7 @@ module.exports = {
         primaryViolet: 'hsl(257, 27%, 26%)',
         primaryCyan: 'hsl(180, 66%, 49%)',
         secondaryRed: 'hsl(0, 87%, 67%)',
-        neutralGray: 'hsl(0, 87%, 67%)',
+        neutralGray: 'hsl(0, 0%, 75%)',
         neutralGrayishViolet: 'hsl(257, 7%, 63%)',
         neutralVeryDarkBlue: 'hsl(255, 11%, 22%)',
         neutralVeryDarkViolet: 'hsl(260, 8%, 14%)',
