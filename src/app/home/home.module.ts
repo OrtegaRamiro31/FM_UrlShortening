@@ -3,6 +3,7 @@ import {CommonModule, NgOptimizedImage} from '@angular/common';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './pages/home/home.component';
 import { StartedComponent } from './components/started/started.component';
+import { ShortenComponent } from './components/shorten/shorten.component';
 
 
 
@@ -10,7 +11,8 @@ import { StartedComponent } from './components/started/started.component';
   declarations: [
     HeaderComponent,
     HomeComponent,
-    StartedComponent
+    StartedComponent,
+    ShortenComponent
   ],
   exports: [
     HomeComponent
