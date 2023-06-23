@@ -13,7 +13,7 @@
       <h4 class="text-xl text-center text-white xl:text-left font-bold mb-5">{{link.title}}</h4>
       <nav class="flex flex-col gap-3">
         <a
-          class="block text-neutralGray text-center xl:text-left"
+          class="block text-neutralGray hover:text-gray-500 text-center xl:text-left"
           *ngFor="let linkItem of link.links"
           [href]="linkItem.href"
         >{{ linkItem.linkName }}</a>
@@ -21,13 +21,18 @@
     </li>
   </ul>
 
-  <div class="flex justify-center gap-6 mt-10">
-    <img
-      class="h-6 w-6"
-      *ngFor="let iconName of iconSocialNetworks"
-      [ngSrc]="'assets/img/icon-'+ iconName +'.svg'"
-      alt="Icon Button Facebook"
-      height="24" width="24">
+  <div class="flex justify-center gap-6 mt-10 xl:mt-0">
+    <a
+      href="#"
+      *ngFor="let iconName of iconSocialNetworks">
+
+      <img
+        class="h-6 w-6"
+        [ngSrc]="'assets/img/icon-'+ iconName +'.svg'"
+        alt="Icon Button Facebook"
+        height="24" width="24" />
+    </a>
+
   </div>
 </div>
 
