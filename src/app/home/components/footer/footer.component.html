@@ -1,4 +1,4 @@
-<div class="bg-neutralVeryDarkViolet pt-12">
+<div class="bg-neutralVeryDarkViolet py-12">
   <div class="flex justify-center mb-10">
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -20,5 +20,13 @@
       </nav>
     </li>
   </ul>
+
+  <div class="flex justify-center gap-6 mt-10">
+    <img
+      *ngFor="let iconName of iconSocialNetworks"
+      [ngSrc]="'assets/img/icon-'+ iconName +'.svg'"
+      alt="Icon Button Facebook"
+      height="24" width="24">
+  </div>
 </div>
 

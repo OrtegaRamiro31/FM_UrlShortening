@@ -8,6 +8,12 @@ import {LinksFooter} from "../../interfaces/linksFooter.interface";
   ]
 })
 export class FooterComponent {
+  public iconSocialNetworks: string[] = [
+    'facebook',
+    'twitter',
+    'pinterest',
+    'instagram'
+  ];
   public links: LinksFooter[] = [
     {
       title: 'Features',
