@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {ShorterLinksService} from "../../services/shorter-links.service";
 import {ShortlinkInterface} from "../../interfaces/shortlink.interface";
-import {Subscription} from "rxjs";
+import {catchError, Subscription, throwError} from "rxjs";
 
 @Component({
   selector: 'home-shorten',
@@ -39,11 +39,23 @@ export class ShortenComponent {
     private shorterLinksService: ShorterLinksService,
   ) { }
 
+  isInvalidField( field: string ): boolean {
+    return !!this.myForm.controls[field].errors;
+  }
 
   generateShortLink(): void {
+
     this.linkValue = this.myForm.value.link;
-    const subscription: Subscription = this.shorterLinksService.getShorterLink(this.linkValue).subscribe(
+    const subscription: Subscription = this.shorterLinksService.getShorterLink(this.linkValue)
+      .pipe(
+        catchError( (error) => {
+          console.log('Error ocurrido', error);
+          return throwError(error);
+        })
+      )
+      .subscribe(
       shortLink => {
+        console.log('suscriot')
         this.shortLinksList = [...this.shortLinksList, shortLink];
         subscription.unsubscribe();
       }

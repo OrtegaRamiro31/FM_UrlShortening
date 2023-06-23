@@ -1,11 +1,19 @@
   <form class="-translate-y-1/2" [formGroup]="myForm" (ngSubmit)="generateShortLink()">
-    <div class="relative overflow-hidden flex flex-col xl:flex-row items-center justify-evenly bg-primaryViolet h-40 rounded-xl xl:w-11/12 xl:mx-auto">
-      <input
-        class="w-10/12 xl:w-9/12 bg-white p-3 rounded z-10"
-        type="text"
-        placeholder="Shorten a link here..."
-        formControlName="link"
-      />
+    <div class="relative overflow-hidden flex flex-col xl:flex-row gap-10 xl:gap-0 items-center justify-evenly bg-primaryViolet py-10 rounded-xl xl:w-11/12 xl:mx-auto">
+      <div class="flex justify-center z-10 relative w-8/12">
+        <input
+          class="border-4 w-full mx-auto bg-white p-3 rounded z-10"
+          [ngClass]="{'border-red-500 focus:outline-none': isInvalidField('link'), 'border-transparent': !isInvalidField('link')}"
+          type="text"
+          placeholder="Shorten a link here..."
+          formControlName="link"
+        />
+        <p
+          *ngIf="isInvalidField('link')"
+          class="absolute text-left text-xs text-red-500 italic mt-1 w-full"
+          style="top: 100%;"
+        >Please add a link</p>
+      </div>
 
       <button
         type="submit"
@@ -29,4 +37,3 @@
       [shortestLink]="shortestLink"
     ></home-cardlink>
   </div>
-
