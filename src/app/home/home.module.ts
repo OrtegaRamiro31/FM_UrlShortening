@@ -9,6 +9,7 @@ import { CardlinkComponent } from './components/cardlink/cardlink.component';
 import {ClipboardModule} from "ngx-clipboard";
 import { StatisticsComponent } from './components/statistics/statistics.component';
 import { StatisticComponent } from './components/statistic/statistic.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 
@@ -21,6 +22,7 @@ import { StatisticComponent } from './components/statistic/statistic.component';
     CardlinkComponent,
     StatisticsComponent,
     StatisticComponent,
+    FooterComponent,
   ],
   exports: [
     HomeComponent
